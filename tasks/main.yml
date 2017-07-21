@@ -1,0 +1,25 @@
+---
+- name: Install numad.
+  package:
+    name: numad
+    state: present
+
+- name: Install numactl/numastat utilities.
+  package:
+    name: numactl
+    state: present
+
+- name: Copy numad.conf configuration.
+  template:
+    src: numad.conf.j2
+    dest: /etc/numad.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart numad
+
+- name: Start numad and enable at boottime.
+  service:
+    name: numad
+    state: started
+    enabled: yes
