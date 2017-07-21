@@ -1,6 +1,9 @@
 Ansible Role: numad
 ===================
 
+[![Build Status](https://travis-ci.org/giovtorres/ansible-role-numad.svg?branch=master)](https://travis-ci.org/giovtorres/ansible-role-numad)
+[![Ansible Role](https://img.shields.io/ansible/role/19391.svg)](https://galaxy.ansible.com/giovtorres/numad/)
+
 Installs and configures numad, a system daemon that monitors NUMA topology.
 This role also installs the numactl and numastat utilities.  Supported on EL 6
 and 7.
